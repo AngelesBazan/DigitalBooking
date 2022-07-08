@@ -1,0 +1,10 @@
+pages:
+  stages: deploy
+  enviroment:
+    name: website
+  script:
+    - mv ./dist/dev-project/* ./public
+  artifacts:
+    paths:
+    - public
+    

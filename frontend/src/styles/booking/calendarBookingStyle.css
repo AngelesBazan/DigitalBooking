@@ -1,0 +1,32 @@
+/* .calendar-booking-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tittle-section-booking{
+    color: var(--color-2);
+    margin: 30px 20px;
+    align-self: flex-start;
+}
+
+.calendar-booking{
+    width: 95vw;
+    height: 40vh;
+} */
+
+.calendar-container-booking {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+@media (min-width: 1024px) {
+    .calendar-container-booking {
+        height: 335px;
+    }
+    .calendar-container-booking .react-datepicker__month-container{
+        width: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+image: docker:latest
+services:
+  - docker:dind
+
+variables:
+  DOCKER_DRIVER: overlay
+
+stages:
+  - coverage
+  - mutation
+  - build
+  - package
+
+gradle-build:
+  image: gradle:alpine
+  stage: build
+  variables:
+    GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+  script:
+    gradle bootJar
+  artifacts:
+    paths:
+      - build/libs/*.jar
+    expire_in: 1 week
+
+gradle-test:
+  image: gradle:alpine
+  stage: coverage
+  script:
+    gradle test jacocoTestCoverageVerification
+
+gradle-mutation:
+  image: gradle:alpine
+  stage: mutation
+  script:
+    gradle pitest
+
+docker-build:
+  stage: package
+  script:
+    - docker build -t registry.gitlab.com/msgoon6-scholar/schollar-service .
+    - docker login -u msgoon6-************ -p ******************** registry.gitlab.com
+    - docker push registry.gitlab.com/msgoon6-scholar/schollar-service

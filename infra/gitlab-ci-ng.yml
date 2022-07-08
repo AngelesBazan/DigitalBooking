@@ -1,0 +1,15 @@
+image: node:11.1.0
+
+stages:
+  - build
+  - test
+  - deploy
+
+compile:
+  stage: build
+  variables:
+    FOO: bar
+  script:
+    - ng build
+  only:
+    -branches

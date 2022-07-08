@@ -1,0 +1,360 @@
+.title {
+    color: var(--color-3);
+    font-size: 1.6rem;
+    margin: 2rem 1rem;
+    font-weight: 700;
+}
+
+.subtitle{
+    color: var(--color-3);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.bg {
+    background-color: var(--color-1);
+    padding-bottom: 70px;
+}
+
+.container {
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-3);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+.input {
+    border: none;
+    padding: 10px;
+    margin: 1rem 0;
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px #00000074;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    font-family: 'Roboto';
+}
+.area>textarea{
+    height: 150px;
+}
+
+.attribute{
+    width: 100%;
+}
+
+.attribute>h3{
+    margin-bottom: 20px;
+}
+
+.att{
+    width: 80%;
+    margin-right: 10px;
+}
+
+.attributeBg{
+    padding: 10px 20px;
+    background-color: #ebebee;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: var(--color-1);
+}
+
+/* HAY UNA CLASE .ICON-CARD QUE PISA LOS ÍCONOS Y LOS DESAPARECE EN MOBILE */
+
+.caracteristicas{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--color-2);
+    text-transform: uppercase;
+    
+}
+
+.caracteristicas>label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 5px;
+}
+
+.caracteristicas>label>input[type="checkbox"]{
+    width: 20px;
+	height: 20px;
+}
+
+.plus{
+    width: 50px;
+    height: 50px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: 3.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.delete{
+    box-sizing: border-box!important;
+    width: 50px;
+    height: 50px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: 3.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.plus:hover, .submit:hover, .delete:hover{
+    background-color: var(--color-1);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.plus:active, .submit:active, .delete:hover {
+  box-shadow: inset 0 0 4px var(--color-2);
+}
+
+.policiesBg{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+.blockDescription{
+    width: 100%;
+}
+
+.blockDescription>h4{
+    color: var(--color-3);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.blockDescription>textarea{
+    height: 150px;
+}
+
+.imagesBg, .imgsList{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: var(--color-1);;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.imgContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgsList{
+    padding: 10px 20px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgsList>ol{
+    width: 100%;
+    overflow: hidden;
+}
+
+.imgsList>ol>li{
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imgsList>ol>li>div{
+    background-color: #fff;
+}
+
+.imgsList>ol>li>svg{
+    background-color: var(--color-3);
+    padding: 0px 2px;
+}
+
+.inputImg {
+    border: none;
+    padding: 10px;
+    margin: 1rem 0;
+    width: 85%;
+    height: 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px #00000074;
+    margin-right: 10px;
+}
+
+.inputImgPost{
+    border: none;
+    padding: 10px;
+    margin: 1rem 0;
+    width: 93%;
+    height: 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px #00000074;
+}
+
+.submitContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    height: 60px;
+}
+
+.submit{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    width: 94%;
+    height: 100%;
+    font-weight: 500;
+    border: none;
+}
+
+.error {
+    color: red;
+    text-align: end;
+    align-self: flex-end;
+    font-size: .8rem;
+}
+
+.errorImg{
+    color: gray;
+    font-size: .8rem;
+    margin-bottom: 15px;
+}
+
+.icon-card2{
+    display: block;
+    width: 18px;
+    margin: 8px 0px;
+    color: var(--color-2);
+    
+}
+@media screen and (min-width: 768px){
+    .container{
+        margin: 1.5rem 2rem;
+    }
+    .productData{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section{
+        width: 48%;
+    }
+    .area{
+        width: 100%;
+    }
+    .att{
+       width: 88%;
+    }
+    .plus{
+        margin: 0px 8px;
+    }
+    .policiesBg, .imagesBg{
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px 0px #00000033;
+        padding: 20px;
+    }
+    .policiesBg{
+        margin-bottom: 20px;
+    }
+    .inputImg{
+        width: 90%;
+    }
+    .submitContainer{
+        width: 60%;
+    }
+    .caracteristicas{
+        justify-content: space-between;
+    }
+    .caracteristicas>label{
+        font-size: 1.3rem;
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px){
+    .att{
+        display: flex;
+        justify-content: space-around;
+        width: 96%;
+    }
+    .attName{
+        width: 68%;
+    }
+    .attIcon{
+        width: 30%;
+    }
+    .plus{
+        align-self: flex-end;
+        margin-bottom: 15px;
+    }
+    .policiesBg{
+        flex-direction: row;
+        gap: 25px;
+    }
+    .blockDescription>textarea{
+        height: 220px;
+        margin-bottom: 0px;
+    }
+    .inputImg{
+        width: 95%;
+    }
+    .submitContainer{
+        width: 50%;
+    }
+    .caracteristicas>label{
+        width: 30%;
+        font-size: .8em;
+    }
+}

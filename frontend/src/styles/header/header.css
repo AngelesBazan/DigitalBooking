@@ -1,0 +1,15 @@
+
+.etiqueta-para-arreglar-logo{
+    height: 55px!important;
+}
+@media screen and (min-width: 768px) {
+    .etiqueta-para-arreglar-logo{
+        height: 62px!important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .etiqueta-para-arreglar-logo{
+        height: 64px!important;
+    }
+}

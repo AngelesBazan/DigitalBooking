@@ -1,0 +1,292 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 93px;
+    padding: 19px 4px 19px 24px;
+    background-color: var(--primary-color);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blockLogo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.blockLogo img {
+    height: 100%;
+}
+
+.logoSlogan {
+    display: flex;
+    align-items: flex-end;
+}
+
+.slogan {
+    display: none;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--color-3);
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    width: 50vw;
+    
+}
+
+.button {
+    background-color: var(--primary-color);
+    width: 180px;
+    height: 40px;
+    padding: 15px;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-weight: 700;
+    display: none;
+    font-size: 1rem;
+    transition: all 0.5s ease-out;
+    outline: none;
+}
+
+.button:hover {
+    background-color: var(--color-1);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+
+    
+   
+   
+.button:active {
+    box-shadow: inset 0 0 2px var(--color-2);
+}
+
+.blockUser {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    
+    font-weight: 700;
+    color: var(--color-2);
+    font-size: 1rem;
+    display: none;
+    
+}
+
+.blockUserBurger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+    padding: 5px;
+    gap: 10px;
+    /* margin-top: 170px; */
+}
+
+.blockUserBurger>.avatar {
+    background-color: #fff;
+    color: var(--color-3);
+    width: 40px;
+}
+
+.blockUserBurger>.userHeader {
+    gap: 5px;
+}
+
+.blockUserBurger>.userHeader>.userlogHeader {
+    color: var(--color-2);
+}
+
+.burgerLogout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.lineLogout {
+    text-align: end;
+    font-size: .9rem;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.lineLogout>span {
+    margin-left: 3px;
+    color: var(--secondary-color);
+}
+
+.userHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.userHeader>p:first-child {
+    color: var(--primary-color);
+}
+
+.avatar {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.blockUserBurger p{
+    text-align: end;
+    
+    
+}
+
+.logout {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+.userAdmin{
+    display: flex;
+    position: relative;
+    color: var(--color-2);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 10px;   
+
+}
+
+
+
+
+
+
+.userAdmin{
+    display: flex;
+    position: relative;
+    color: var(--color-2);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 10px;   
+}
+.avatarSkeleton{
+    /* color: var(--color-3); */
+    width: 40px;
+    height: 40px;
+    /* background-color: var(--secondary-color); */
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 7px;
+    font-size: 1.3rem;
+    padding: 7px;
+    margin-right: 5px;
+    background-color: var(--color-2);
+}
+.userlogHeaderAvatar{
+    color: transparent;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 100px;
+        padding: 19px 32px;
+    }
+
+    .buttons {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .blockUser {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .blockUserBurger {
+        display: unset;
+    }
+
+    .userHeader>p:first-child {
+        color: var(--color-3);
+    }
+
+    .userlogHeader {
+        font-weight: 800;
+        color: var(--secondary-color);
+    }
+
+    .userHeader {
+        position: relative;
+        align-items: flex-start;
+    }
+    .userHeader .faL{
+        position: absolute;
+        right: -11px;
+        top: -19px;
+    }
+
+    .avatar {
+        font-size: 1.3rem;
+        padding: 7px;
+        margin-right: 5px;
+        background-color: var(--color-2);
+    }
+    .faL{
+        padding: 14px;
+        cursor: pointer;
+    }
+    .userAdmin{
+        display: flex;
+        align-items: center;
+        border-right: solid;
+        border-color: var(--secondary-color);
+        margin-right: 20px;
+        padding-right: 20px;
+        height: 4vw
+        
+        }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        height: 100px;
+        padding: 18px 40px;
+    }
+
+    .slogan {
+        display: block;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+    
+}

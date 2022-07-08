@@ -1,0 +1,25 @@
+.share-icon{
+font-size: 2rem;
+margin: 1rem 3rem;
+color: var(--color-2);
+}
+
+/*
+.icons-container{
+    margin-left: 6.5rem;
+    margin-top: -3rem;
+}
+*/
+.icons-container{
+    margin-left: 2.5rem;
+
+}
+
+.icons-share{
+border-radius: 50%;
+margin-right: 0.5rem;
+margin-left: 0.5rem;
+width:35px ;
+height:35px ;
+
+}

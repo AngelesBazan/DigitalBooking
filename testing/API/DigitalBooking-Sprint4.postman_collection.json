@@ -1,0 +1,3724 @@
+{
+	"info": {
+		"_postman_id": "66af728e-522b-4bc2-aa54-b0e17de59b3a",
+		"name": "DigitalBooking-Sprint4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13361525"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Hoteles\",\r\n    \"description\": \"Moderno hotel de 4 estrellas con vista al mar, a pocos metros de la playa.\",\r\n    \"urlImage\": \"https://images.unsplash.com/photo-1578898886225-c7c894047899?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"title\": \"Posada\",\r\n    \"description\": \"Alojamientos con cocina, baño y comedor compartidos, el mejor lugar para conocer viajeros de todo el mundo.\",\r\n    \"urlImage\": \"https://images.unsplash.com/photo-1644031995392-5a07babd176c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"title\": \"Posada\",\r\n    \"description\": \"Alojamientos con cocina, baño y comedor compartidos, el mejor lugar para conocer viajeros de todo el mundo.\",\r\n    \"urlImage\": \"https://images.unsplash.com/photo-1644031995392-5a07babd176c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"Posada\",\r\n    \"description\": \"Alojamientos con cocina, baño y comedor compartidos, el mejor lugar para conocer viajeros de todo el mundo.\",\r\n    \"urlImage\": \"https://images.unsplash.com/photo-1644031995392-5a07babd176c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/categories/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"5"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/categories/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hermitage Hotel\",\r\n    \"description\": \"Esta propiedad está a 6 minutos caminando de la playa. El Hotel Nevada ofrece alojamiento de 3 estrellas con decoración característica alpina a 200 metros del lago Nahuel Huapi. Cuenta con WiFi gratis. /Todas las habitaciones del Nevada están insonorizadas y disponen de TV vía satélite, radio, artículos de aseo exclusivos y secador de pelo. \",\r\n    \"address\": \"Av. San Martín 536\",\r\n    \"latitude\": -41.1343742,\r\n    \"longitude\": -71.3075128,\r\n    \"checkinStart\": \"09:00:00\",\r\n    \"checkinEnd\": \"15:00:00\",\r\n    \"houseRules\": \"Check-out: 10:00 /No se permiten fiestas /No fumar\",\r\n    \"healthAndSafety\": \"Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus /Detector de humo /Depósito de seguridad\",\r\n    \"cancellationPolicy\": \"Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.\",\r\n    \"category\": {\r\n        \"id\": 1\r\n    },\r\n    \"characteristics\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"city\": {\r\n        \"id\": 3\r\n    },\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Hermitage Hotel\",\r\n    \"description\": \"Esta propiedad está a 6 minutos caminando de la playa. El Hotel Nevada ofrece alojamiento de 3 estrellas con decoración característica alpina a 200 metros del lago Nahuel Huapi. Cuenta con WiFi gratis. /Todas las habitaciones del Nevada están insonorizadas y disponen de TV vía satélite, radio, artículos de aseo exclusivos y secador de pelo. /El restaurante del alojamiento sirve típica carne argentina y platos internacionales. Además, hay bar, biblioteca y sala de juegos con máquinas recreativas. /El Hotel Nevada está a 13 km del aeropuerto de San Carlos de Bariloche y a 19 km del cerro Catedral. /Nuestros clientes dicen que esta parte de San Carlos de Bariloche es su favorita, según los comentarios independientes.\",\r\n    \"address\": \"Sarmiento 536\",\r\n    \"latitude\": -41.1343742,\r\n    \"longitude\": -71.3075128,\r\n    \"checkinStart\": \"09:00:00\",\r\n    \"checkinEnd\": \"15:00:00\",\r\n    \"houseRules\": \"Check-out: 10:00 /No se permiten fiestas /No fumar\",\r\n    \"healthAndSafety\": \"Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus /Detector de humo /Depósito de seguridad\",\r\n    \"cancellationPolicy\": \"Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.\",\r\n    \"category\": {\r\n        \"id\": 1\r\n    },\r\n    \"characteristics\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"city\": {\r\n        \"id\": 11\r\n    },\r\n    \"images\": [], \r\n    \"bookings\": [\r\n        {\r\n            \"id\": 1,\r\n            \"booking_start_time\": \"2022-06-15T00:00:00\",\r\n            \"initial_date\": \"2022-07-02\",\r\n            \"final_date\": \"2020-07-05\"\r\n        }\r\n    ],\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"name\": \"Hermitage Hotel\",\r\n    \"description\": \"Esta propiedad está a 6 minutos caminando de la playa. El Hotel Nevada ofrece alojamiento de 3 estrellas con decoración característica alpina a 200 metros del lago Nahuel Huapi. Cuenta con WiFi gratis. /Todas las habitaciones del Nevada están insonorizadas y disponen de TV vía satélite, radio, artículos de aseo exclusivos y secador de pelo. /El restaurante del alojamiento sirve típica carne argentina y platos internacionales. Además, hay bar, biblioteca y sala de juegos con máquinas recreativas. /El Hotel Nevada está a 13 km del aeropuerto de San Carlos de Bariloche y a 19 km del cerro Catedral. /Nuestros clientes dicen que esta parte de San Carlos de Bariloche es su favorita, según los comentarios independientes.\",\r\n    \"address\": \"Sarmiento 536\",\r\n    \"latitude\": -41.1343742,\r\n    \"longitude\": -71.3075128,\r\n    \"checkinStart\": \"09:00:00\",\r\n    \"checkinEnd\": \"15:00:00\",\r\n    \"houseRules\": \"Check-out: 10:00 /No se permiten fiestas /No fumar\",\r\n    \"healthAndSafety\": \"Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus /Detector de humo /Depósito de seguridad\",\r\n    \"cancellationPolicy\": \"Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.\",\r\n    \"category\": {\r\n        \"id\": 1\r\n    },\r\n    \"characteristics\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"city\": {\r\n        \"id\": 11\r\n    },\r\n    \"images\": [],\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"Hermitage Hotel\",\r\n    \"description\": \"Esta propiedad está a 6 minutos caminando de la playa. El Hotel Nevada ofrece alojamiento de 3 estrellas con decoración característica alpina a 200 metros del lago Nahuel Huapi. Cuenta con WiFi gratis. /Todas las habitaciones del Nevada están insonorizadas y disponen de TV vía satélite, radio, artículos de aseo exclusivos y secador de pelo. /El restaurante del alojamiento sirve típica carne argentina y platos internacionales. Además, hay bar, biblioteca y sala de juegos con máquinas recreativas. /El Hotel Nevada está a 13 km del aeropuerto de San Carlos de Bariloche y a 19 km del cerro Catedral. /Nuestros clientes dicen que esta parte de San Carlos de Bariloche es su favorita, según los comentarios independientes.\",\r\n    \"address\": \"Sarmiento 536\",\r\n    \"latitude\": -41.1343742,\r\n    \"longitude\": -71.3075128,\r\n    \"checkinStart\": \"09:00:00\",\r\n    \"checkinEnd\": \"15:00:00\",\r\n    \"houseRules\": \"Check-out: 10:00 /No se permiten fiestas /No fumar\",\r\n    \"healthAndSafety\": \"Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus /Detector de humo /Depósito de seguridad\",\r\n    \"cancellationPolicy\": \"Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.\",\r\n    \"category\": {\r\n        \"id\": 1\r\n    },\r\n    \"characteristics\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"city\": {\r\n        \"id\": 11\r\n    },\r\n    \"images\": [],\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/products/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/products/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/category/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"category",
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/city/ushuaia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"city",
+								"ushuaia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products paged",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/paged?page=1&size=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by date",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/dates/2022-07-02/2022-07-05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"dates",
+								"2022-07-02",
+								"2022-07-05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by date and city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/dates/2022-07-02/2022-07-05/cities/San Carlos de Bariloche",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"dates",
+								"2022-07-02",
+								"2022-07-05",
+								"cities",
+								"San Carlos de Bariloche"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by date and city and category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/dates/2022-07-02/2022-07-05/cities/San Carlos de Bariloche/categories/hostels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"dates",
+								"2022-07-02",
+								"2022-07-05",
+								"cities",
+								"San Carlos de Bariloche",
+								"categories",
+								"hostels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by city and category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/cities/San Carlos de Bariloche/categories/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"cities",
+								"San Carlos de Bariloche",
+								"categories",
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by date and category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/dates/2022-07-02/2022-07-05/categories/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"dates",
+								"2022-07-02",
+								"2022-07-05",
+								"categories",
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get bookings by product id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/2/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"2",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by user id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "images",
+			"item": [
+				{
+					"name": "get image",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/images/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get image negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/images/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add image",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"new image\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1024x768/2406583.jpg?k=c9af9ca11c0faf3afcf7e22cb6b91a5cbb9a16228ee7583284f95305428fbc38&o=&hp=1\",\r\n    \"product\": {\r\n        \"id\": 8\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update image",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 337,\r\n    \"title\": \"other\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1024x768/2406583.jpg?k=c9af9ca11c0faf3afcf7e22cb6b91a5cbb9a16228ee7583284f95305428fbc38&o=&hp=1\",\r\n    \"product\": {\r\n        \"id\": 8\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update image negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"title\": \"other\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1024x768/2406583.jpg?k=c9af9ca11c0faf3afcf7e22cb6b91a5cbb9a16228ee7583284f95305428fbc38&o=&hp=1\",\r\n    \"product\": {\r\n        \"id\": 8\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update image negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"other\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1024x768/2406583.jpg?k=c9af9ca11c0faf3afcf7e22cb6b91a5cbb9a16228ee7583284f95305428fbc38&o=&hp=1\",\r\n    \"product\": {\r\n        \"id\": 8\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characteristics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete image",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/images/337",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images",
+								"337"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete image negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/images/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get images",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cities",
+			"item": [
+				{
+					"name": "get city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get city negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bogotá\",\r\n    \"province\": \"Cundinamarca\",\r\n    \"country\": \"Colombia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 12,\r\n    \"name\": \"Barranquilla\",\r\n    \"province\": \"Cundinamarca\",\r\n    \"country\": \"Colombia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update city negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 100,\r\n    \"name\": \"Barranquilla\",\r\n    \"province\": \"Cundinamarca\",\r\n    \"country\": \"Colombia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update city negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"Barranquilla\",\r\n    \"province\": \"Cundinamarca\",\r\n    \"country\": \"Colombia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cities/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete city negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cities/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "characteristics",
+			"item": [
+				{
+					"name": "get characteristic",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characteristics/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get characteristic negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characteristics/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add characteristic",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"No fumadores\",\r\n    \"icon\": \"faSink\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characteristics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update characterisric",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"name\": \"No fumadores\",\r\n    \"icon\": \"faBanSmoking\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characteristics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update characterisric negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"name\": \"No fumadores\",\r\n    \"icon\": \"faBanSmoking\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characteristics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update characterisric negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"No fumadores\",\r\n    \"icon\": \"faBanSmoking\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characteristics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete characterisric",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characteristics/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete characterisric negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/characteristics/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get characterisrics",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characteristics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characteristics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "get role",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/roles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get role negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/roles/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add role",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update role",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"adm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update role negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"name\": \"adm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update role negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"adm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete role",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/roles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete role negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/roles/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get roles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan\",\r\n    \"lastname\": \"Pérez\",\r\n    \"username\": \"juanperez@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"city\": \"Rosario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Juana\",\r\n    \"lastname\": \"Pérez\",\r\n    \"username\": \"juanperez@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"city\": \"Córdoba\",\r\n    \"bookings\": [],\r\n    \"roles\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"name\": \"Juana\",\r\n    \"lastname\": \"Pérez\",\r\n    \"email\": \"juanperez@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"city\": \"Córdoba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"Juana\",\r\n    \"lastname\": \"Pérez\",\r\n    \"email\": \"juanperez@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"city\": \"Córdoba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "Admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "Admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3OTAyMjE4LCJpYXQiOjE2NTU3NTY2MTh9.zOfsCd2gri3K5Fu0AALNGpAe1-QAtlLlmy2YP0WHs1Hxcg6M_b9ZMPsUm5j7_IJr0SsGgsRZ7geGISiZVk9NTQ",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users/email/admin@admin.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"email",
+								"admin@admin.com"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get bookings by user id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE2NTc3MzI2MzgsImlhdCI6MTY1NTU4NzAzOH0.zRnOoJ79MLDd8vVK8yYnv_H9cX_ThJek4n-5STsaNCon2aJuF7njeO2q_AROTL1X1ckoUJCaiQ6bFl5BAcplYg",
+								"description": "Admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3OTAyMjE4LCJpYXQiOjE2NTU3NTY2MTh9.zOfsCd2gri3K5Fu0AALNGpAe1-QAtlLlmy2YP0WHs1Hxcg6M_b9ZMPsUm5j7_IJr0SsGgsRZ7geGISiZVk9NTQ",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users/2/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin@admin.com\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user@user.com\",\r\n    \"password\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan\",\r\n    \"lastname\": \"Perez\",\r\n    \"username\": \"juanperez@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"city\": \"Rosario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "get booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookings/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get booking negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookings/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3NzMzMTc1LCJpYXQiOjE2NTU1ODc1NzV9.-NWlt_UQ_bLuBsc3edAX-gT_XWe23vhCujlR3BEebiIFHLfS_FehtZRxnV6WGtcaSUjMGgS5QTYAPRB8Ova1iA",
+								"type": "text",
+								"description": "user"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"initial_date\": \"2023-08-01\",\r\n    \"final_date\": \"2023-08-10\",\r\n    \"user\": {\r\n        \"id\": 2\r\n    },\r\n    \"product\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3NzMzMTc1LCJpYXQiOjE2NTU1ODc1NzV9.-NWlt_UQ_bLuBsc3edAX-gT_XWe23vhCujlR3BEebiIFHLfS_FehtZRxnV6WGtcaSUjMGgS5QTYAPRB8Ova1iA",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"initial_date\": \"2022-07-02\",\r\n    \"final_date\": \"2022-07-05\",\r\n    \"user\": {\r\n        \"id\": 2\r\n    },\r\n    \"product\": {\r\n        \"id\": 3\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update booking negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3NzMzMTc1LCJpYXQiOjE2NTU1ODc1NzV9.-NWlt_UQ_bLuBsc3edAX-gT_XWe23vhCujlR3BEebiIFHLfS_FehtZRxnV6WGtcaSUjMGgS5QTYAPRB8Ova1iA",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1000,\r\n    \"initial_date\": \"2022-07-02\",\r\n    \"final_date\": \"2022-07-05\",\r\n    \"user\": {\r\n        \"id\": 2\r\n    },\r\n    \"product\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update booking negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3NzMzMTc1LCJpYXQiOjE2NTU1ODc1NzV9.-NWlt_UQ_bLuBsc3edAX-gT_XWe23vhCujlR3BEebiIFHLfS_FehtZRxnV6WGtcaSUjMGgS5QTYAPRB8Ova1iA",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"initial_date\": \"2022-07-02\",\r\n    \"final_date\": \"2022-07-05\",\r\n    \"user\": {\r\n        \"id\": 2\r\n    },\r\n    \"product\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3NzMzMTc1LCJpYXQiOjE2NTU1ODc1NzV9.-NWlt_UQ_bLuBsc3edAX-gT_XWe23vhCujlR3BEebiIFHLfS_FehtZRxnV6WGtcaSUjMGgS5QTYAPRB8Ova1iA",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookings/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete booking negative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiZXhwIjoxNjU3NzMzMTc1LCJpYXQiOjE2NTU1ODc1NzV9.-NWlt_UQ_bLuBsc3edAX-gT_XWe23vhCujlR3BEebiIFHLfS_FehtZRxnV6WGtcaSUjMGgS5QTYAPRB8Ova1iA",
+								"description": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get bookings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

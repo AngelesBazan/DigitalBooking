@@ -1,0 +1,159 @@
+.h2-calendar {
+    color: #383B58;
+    padding: 10px;
+    font-size: 1.6rem;
+  
+  
+}
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.rmdp-calendar {
+  width: 98vw;
+  display: inline-block;
+  
+  
+}
+.rmdp-header {
+  font-size: 3.5vw;
+  margin-bottom: 10px;
+}
+
+.rmdp-week {
+  width: 45vw;
+  height: 8vw;
+  
+}
+.rmdp-week-day {
+color: black;
+
+}
+
+
+.container-2 {
+  background-color: white;
+  width: 98%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  border: none;
+
+  margin-bottom: 4%;
+}
+
+.p-calendar {
+  width: 400px;
+  font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.button-calendar {
+  width: 400px;
+  height: 40px;
+  margin-top: 40px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #1dbeb4;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  border: none;
+}
+.rmdp-range, .rmdp-selected, .highlight-white{
+  border-radius: 50%;
+  background-color: #1dbeb4;
+  color: white;
+  
+}
+
+
+
+
+@media (min-width: 768px) {
+  
+    .h2-calendar {
+        font-size: 1.8rem;
+        padding: 2rem;
+    }
+    .rmdp-header {
+    font-size: 3vw;
+  }
+  .rmdp-week {
+    margin-right: 7vw;
+    width: 42vw;
+    height: 3.5vw;
+  }
+  .container-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .p-calendar {
+    width: 45%;
+  }
+
+  .button-calendar {
+    width: 45%;
+    height: 40px;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1080px) {
+  .rmdp-header {
+    font-size: 1.7vw;
+  }
+  .calendar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+  }
+  .container-1 {
+    width: 66%;
+    padding-bottom: 4%;
+  }
+  .rmdp-calendar {
+    width: 64vw;
+    
+  }
+  .rmdp-week {
+    margin-left: 20px;
+    width: 26vw;
+    height: 3vw;
+    margin-right: 5vw;
+
+  }
+
+  .container-2 {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+  }
+  .p-calendar {
+    width: 350px;
+  }
+
+  .button-calendar {
+    width: 350px;
+    height: 40px;
+    margin-top: 0;
+  }
+}

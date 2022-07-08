@@ -1,0 +1,26 @@
+image: node:16.13.1
+
+stages:
+  - install
+  - test
+
+install-dependencies:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    expire_in: 1hr
+    paths:
+      - node_modules/
+    cache:
+      paths:
+        - node_modules/
+test-apps:
+  stage: test
+  dependencies:
+    - install-dependencies
+  before_script:
+    - apt-get update && apt-instal -y apt-transport-https
+    - wget -q -0 - https://dl-ssl.google.com/google
+  script:
+    - npm run test:ci

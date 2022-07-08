@@ -1,0 +1,30 @@
+.block-carrousel-container {
+  display: unset;
+}
+
+
+@media (min-width: 1024px) {
+  .block-carrousel-container {
+    display: none;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-container-with-close{
+    position: relative;
+  }
+
+/*   .close-carousel{
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+  } */
+}

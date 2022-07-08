@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: 500;
+    font-size: .8rem;
+
+    padding-top: .5rem;
+    
+}
+
+.text {
+    color: var(--color-2);
+    
+}
+
+.a{
+    outline: none;
+}
+
+.span {
+    color: rgb(43, 113, 235);
+    
+}
+
+@media (min-width: 768px) {
+    .container {
+        /* margin-top: 15px; */
+    }
+}

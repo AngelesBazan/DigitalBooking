@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: #1DBEB4;
+    --color-1:  #F3F1ED; 
+    --color-2: #383B58;
+    --color-3: #545776;
+    --color-4: #F9F9F9;
+    --color-5: #ebebee; 
+
+} 
+
+::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+}
+
+.container::-webkit-scrollbar-track:hover,
+.container::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+body{
+    background-color: var(--color-4);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 0!important;
+}

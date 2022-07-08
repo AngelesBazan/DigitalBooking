@@ -1,0 +1,18 @@
+/* Título formulario*/
+.title-container{
+    display: block;
+    justify-content: start;
+    align-items: start;
+}
+
+.title-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}

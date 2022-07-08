@@ -1,0 +1,94 @@
+.leaflet-container {
+    align-self: center;
+    width: calc(100% - 20px);
+    height: 70vw;
+    border-radius: 8px;
+}
+
+.leaflet-left {
+    z-index: 990;
+}
+
+.product-page .city-map {
+    padding: 0 0 1rem 10px;
+}
+
+.container-map {
+    margin-bottom: 1rem;
+}
+
+.leaflet-bottom {
+    display: none;
+}
+
+.leaflet-left {
+    display: none;
+}
+.leaflet-container .leaflet-marker-pane img{
+    width: 15vw!important;
+    height: 12vw!important;
+    max-width: none!important;
+}
+
+.city-map{
+    font-size: 1.2rem!important;
+}
+
+@media screen and (min-width: 768px) {
+    .leaflet-container {
+        width: calc(100% - 4rem);
+        height: 64vw;
+    }
+
+    .product-page .city-map {
+        padding: 0 0 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .container-map {
+        margin-bottom: 1.8rem;
+    }
+    .leaflet-container .leaflet-marker-pane img{
+        width: 11vw!important;
+        height: 8.4vw!important;
+        max-width: none!important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .leaflet-container {
+        height: 40vw;
+    }
+
+    .container-map {
+        margin-bottom: 3rem;
+    }
+
+    .leaflet-left {
+        display: block;
+        right: 1rem;
+        left: auto;
+    }
+    .leaflet-touch .leaflet-bar{
+        border: none;
+    }
+    .leaflet-control-zoom-in{
+        margin-bottom: 0.4rem;
+    }
+    .leaflet-touch .leaflet-bar a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px!important;
+        border: 1px solid var(--secondary-color);
+    }
+    .leaflet-touch .leaflet-bar a span{
+        color: var(--secondary-color);
+    }
+    .leaflet-container .leaflet-marker-pane img{
+        width: 5.4vw!important;
+        height: 4.4vw!important;
+        max-width: none!important;
+    }
+    
+}
