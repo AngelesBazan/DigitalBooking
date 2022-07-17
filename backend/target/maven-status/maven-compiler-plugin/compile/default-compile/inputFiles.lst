@@ -1,80 +1,80 @@
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\ProductService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\CityDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Category.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\exceptions\UnauthorizedException.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Image.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Booking.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\IProductRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\ICategoryService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\IRoleService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\IImageRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\view\ICharacteristicsViewRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\IProductService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\exceptions\ConflictException.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\IUserRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\StarsDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\ProductController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\ImageService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\RoleDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\ICityService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\BookingController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\JWTUserDetailsService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\view\ProductView.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\UserDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\CategoryService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\RoleController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\StarsController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Product.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\CharacteristicService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\exceptions\ResourceNotFoundException.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\ImageController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\view\CharacteristicsViewController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\City.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\jwt\JWTRequest.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\ICategoryRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\IStarsRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\StarsService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\CityService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\config\JWTUtils.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\exceptions\GlobalExceptionHandler.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\ICharacteristicService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\ICharacteristicRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\exceptions\BadRequestException.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\IRoleRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\CategoryController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\view\IProductViewRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\CategoryDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\BookingDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\config\JWTRequestFilter.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\CityController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\view\CharacteristicsViewService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\view\ProductViewController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\IBookingRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Stars.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\RoleService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\view\ProductViewService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\JWTAuthenticationController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\UserService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\IStarsService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Characteristic.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\Role.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\IBookingService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\CharacteristicDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\User.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\view\ProductViewDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\impl\BookingService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\IImageService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\view\CharacteristicsView.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\config\CORS.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\CharacteristicController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\DigitalBookingApplication.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\ImageDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\controller\UserController.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\model\jwt\JWTResponse.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\repository\ICityRepository.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\ICRUDService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\view\IProductViewService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\dto\ProductDTO.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\config\SecurityConfiguration.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\view\ICharacteristicsViewService.java
-C:\Users\PC\Documents\CTD\4to bimestre\Proyecto Integrador\1\grupo-01\backend\src\main\java\com\example\digitalbooking\service\IUserService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\RoleDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\view\ICharacteristicsViewService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\IProductService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\config\SecurityConfiguration.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\ImageController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\IImageRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\CategoryService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\ProductService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\view\CharacteristicsViewService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\ProductController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\jwt\JWTRequest.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\view\ProductViewService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\exceptions\ConflictException.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\CharacteristicController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\JWTUserDetailsService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\view\ProductView.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\exceptions\BadRequestException.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Image.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\ICityRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\exceptions\UnauthorizedException.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\StarsService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\BookingDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\ProductDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\CategoryDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\exceptions\ResourceNotFoundException.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\City.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\view\CharacteristicsView.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\IUserService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\CategoryController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\ICRUDService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\CityDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\config\JWTUtils.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Characteristic.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\BookingController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\view\IProductViewRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\view\CharacteristicsViewController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\view\ProductViewController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\RoleService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\exceptions\GlobalExceptionHandler.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\CharacteristicDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\ICategoryRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\IUserRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\IRoleRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\CityController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\CharacteristicService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\CityService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\view\ICharacteristicsViewRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\ICityService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\jwt\JWTResponse.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\UserDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\IProductRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Role.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\IImageService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\IRoleService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Stars.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Product.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\User.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\IBookingService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\BookingService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Category.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\ImageDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\IBookingRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\ICharacteristicService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\ICharacteristicRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\DigitalBookingApplication.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\model\Booking.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\StarsController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\IStarsService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\JWTAuthenticationController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\UserController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\UserService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\view\ProductViewDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\ICategoryService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\config\CORS.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\repository\IStarsRepository.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\impl\ImageService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\controller\RoleController.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\service\view\IProductViewService.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\dto\StarsDTO.java
+C:\Users\PC\Documents\CTD\4to bimestre\Proyecto en Github\backend\src\main\java\com\example\digitalbooking\config\JWTRequestFilter.java
